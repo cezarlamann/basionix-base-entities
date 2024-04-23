@@ -3,7 +3,7 @@ name: "Deploy to NuGet"
 on:
   push:
     tags:
-    - 'release-*'
+    - 'v*'
 
 env:
   PROJECT_PATH: 'src/Basionix.BaseEntities/Basionix.BaseEntities.csproj'
