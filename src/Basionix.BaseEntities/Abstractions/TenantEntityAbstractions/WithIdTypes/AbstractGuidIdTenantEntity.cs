@@ -1,9 +1,10 @@
-﻿namespace Basionix.BaseEntities
+namespace Basionix.BaseEntities.Abstractions.TenantEntityAbstractions.WithIdTypes
 {
     using System;
-    using Basionix.BaseEntities.TenantEntityAbstractions;
 
-    public class AbstractGuidIdTenantEntity<T> : AbstractTenantEntity<T, AbstractGuidIdTenant, Guid> where T : struct
+    public class AbstractGuidIdTenantEntity<T> :
+        AbstractTenantEntity<T, AbstractGuidIdTenant, Guid>
+        where T : struct
     {
     }
 }

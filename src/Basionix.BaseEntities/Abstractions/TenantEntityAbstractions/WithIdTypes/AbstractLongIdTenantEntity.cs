@@ -1,8 +1,8 @@
-﻿namespace Basionix.BaseEntities
+namespace Basionix.BaseEntities.Abstractions.TenantEntityAbstractions.WithIdTypes
 {
-    using Basionix.BaseEntities.TenantEntityAbstractions;
-
-    public abstract class AbstractLongIdTenantEntity<T> : AbstractTenantEntity<T, AbstractLongIdTenant, long> where T : struct
+    public abstract class AbstractLongIdTenantEntity<T> :
+        AbstractTenantEntity<T, AbstractLongIdTenant, long>
+        where T : struct
     {
     }
 }

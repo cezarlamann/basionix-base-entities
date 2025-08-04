@@ -1,12 +1,19 @@
-﻿namespace Basionix.BaseEntities
+namespace Basionix.BaseEntities.Interfaces
 {
     using System;
 
-    public interface IAmAuditable
+    public interface IAmAuditable<T> :
+        IHaveAuditableCreation<T>,
+        IHaveAuditableUpdate<T>
+        where T : struct
     {
-        DateTimeOffset CreatedAt { get; set; }
-        DateTimeOffset? UpdatedAt { get; set; }
-        string CreatedBy { get; set; }
-        string? LastUpdatedBy { get; set; }
+    }
+
+    public interface IAmAuditableDateTimeOffset : IAmAuditable<DateTimeOffset>
+    {
+    }
+
+    public interface IAmAuditableDateTime : IAmAuditable<DateTime>
+    {
     }
 }

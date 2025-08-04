@@ -1,6 +1,8 @@
-﻿namespace Basionix.BaseEntities
+namespace Basionix.BaseEntities.Abstractions
 {
     using System;
+
+    using Basionix.BaseEntities.Interfaces;
 
     public class BaseDateTimeProvider : IDateTimeProvider
     {

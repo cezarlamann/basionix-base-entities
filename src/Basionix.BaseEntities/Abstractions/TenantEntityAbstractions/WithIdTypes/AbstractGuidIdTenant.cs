@@ -1,7 +1,6 @@
-﻿namespace Basionix.BaseEntities
+namespace Basionix.BaseEntities.Abstractions.TenantEntityAbstractions.WithIdTypes
 {
     using System;
-    using Basionix.BaseEntities.TenantEntityAbstractions;
 
     public abstract class AbstractGuidIdTenant : AbstractTenant<Guid>
     {

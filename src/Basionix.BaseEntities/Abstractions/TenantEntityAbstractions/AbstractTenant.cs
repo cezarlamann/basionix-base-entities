@@ -1,8 +1,14 @@
-﻿namespace Basionix.BaseEntities.TenantEntityAbstractions
+namespace Basionix.BaseEntities.Abstractions.TenantEntityAbstractions
 {
     using System;
 
-    public abstract class AbstractTenant<TKey> : AbstractEntity<TKey>, ITenant<TKey>, IAmAuditable, IAmSoftDeletable
+    using Basionix.BaseEntities.Interfaces;
+
+    public abstract class AbstractTenant<TKey> :
+        AbstractEntity<TKey>,
+        ITenant<TKey>,
+        IAmAuditable<DateTimeOffset>,
+        IAmSoftDeletable<DateTimeOffset>
         where TKey : struct
     {
         public string TenantName { get; set; } = string.Empty;
