@@ -1,4 +1,4 @@
-﻿namespace Basionix.BaseEntities
+namespace Basionix.BaseEntities.Interfaces
 {
     using System;
 

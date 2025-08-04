@@ -13,6 +13,9 @@
 *.userosscache
 *.sln.docstates
 
+# Auto-generated document XMLs
+src/**/*.xml
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
@@ -403,6 +406,9 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 .idea
+.idea/
+idea/
+
 
 ##
 ## Visual studio for Mac

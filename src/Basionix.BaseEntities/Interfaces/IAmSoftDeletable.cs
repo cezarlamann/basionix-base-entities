@@ -1,11 +1,19 @@
-﻿namespace Basionix.BaseEntities
+namespace Basionix.BaseEntities.Interfaces
 {
     using System;
 
-    public interface IAmSoftDeletable
+    public interface IAmSoftDeletable<T> where T : struct
     {
-        public bool IsDeleted { get; set; }
-        public DateTimeOffset? DeletedAt { get; set; }
-        public string? DeletedBy { get; set; }
+        bool IsDeleted { get; set; }
+        T? DeletedAt { get; set; }
+        string? DeletedBy { get; set; }
+    }
+
+    public interface IAmSoftDeletableDateTimeOffset : IAmSoftDeletable<DateTimeOffset>
+    {
+    }
+
+    public interface IAmSoftDeletableDateTime : IAmSoftDeletable<DateTime>
+    {
     }
 }

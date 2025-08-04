@@ -1,4 +1,4 @@
-﻿namespace Basionix.BaseEntities
+namespace Basionix.BaseEntities.Interfaces
 {
     public interface IEntity<TKey> where TKey : struct
     {

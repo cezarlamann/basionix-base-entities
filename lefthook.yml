@@ -1,0 +1,13 @@
+output:
+  - meta
+  - summary
+  - empty_summary
+  - success
+  - failure
+skip_lfs: true
+pre-commit:
+  jobs:
+  - name: Check BOM
+    run: bash .lefthook/hook_runner.sh pre-commit/check-bom
+  - name: Check line lengths
+    run: bash .lefthook/hook_runner.sh pre-commit/check-line-length
